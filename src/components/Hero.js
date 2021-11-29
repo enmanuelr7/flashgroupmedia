@@ -6,41 +6,41 @@ const StyledHero = styled.div`
   .text-container {
     display: flex;
     flex-direction: column;
+    p {
+      font-weight: bold;
+      color: white;
+      margin-top: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 2.75rem;
+    }
   }
 
-  p {
-    font-weight: bold;
-    color: white;
+  .img-container {
     margin-top: 0.75rem;
-    font-size: 1.2rem;
-  }
-
-  h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
-
-  img {
-    width: min(80%, 20rem);
-    margin: 0 auto;
-    margin-top: 0.75rem;
-    display: block;
+    flex: 1;
+    img {
+      width: min(80%, 20rem);
+      margin: 0 auto;
+      display: block;
+      filter: drop-shadow(1rem 1rem 1rem ${({ theme }) => theme.colors.yellow});
+    }
   }
 
   @media (min-width: ${({ theme }) => theme.desktop}) {
     .text-container {
       justify-content: center;
       flex: 2;
-    }
-    .img-container {
-      flex: 1;
-    }
-    h1 {
-      font-size: 5.5rem;
-      line-height: 5rem;
-    }
-    p {
-      font-size: 1.6rem;
+      h1 {
+        font-size: 5rem;
+        line-height: 4.5rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
     }
   }
 `;
